@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libraria/login_signup/login/signup.dart';
 import 'package:libraria/main.dart';
 
 class splashscreen extends StatefulWidget {
@@ -18,7 +19,7 @@ void initState()
 
 _navigatehome()async{
   await Future.delayed(Duration(milliseconds: 1500),(){});
-  Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) =>  MyHomePage(title: "LIBRARIA"))));
+  Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) =>  loginsignup())));
 }
 
   @override
