@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:libraria/home/home.dart';
+import 'package:libraria/login_signup/login/Login.dart';
+import 'package:libraria/login_signup/login/register1.dart';
 
 class loginsignup extends StatelessWidget {
   const loginsignup({super.key});
@@ -60,7 +62,9 @@ class loginsignup extends StatelessWidget {
                     topRight: Radius.circular(50),
                     bottomRight: Radius.circular(50))),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(Login());
+              },
               child: Text("LOGIN",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
             ),
           ),
@@ -76,7 +80,9 @@ class loginsignup extends StatelessWidget {
                     topRight: Radius.circular(50),
                     bottomRight: Radius.circular(50))),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(register1());
+              },
               child: Text("SIGNUP",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
             ),
           ),

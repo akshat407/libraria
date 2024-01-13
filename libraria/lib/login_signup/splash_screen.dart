@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:libraria/login_signup/login/signup.dart';
+import 'package:libraria/login_signup/login/signup_screen.dart';
 import 'package:libraria/main.dart';
 
 class splashscreen extends StatefulWidget {
