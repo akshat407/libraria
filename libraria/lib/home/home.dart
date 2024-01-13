@@ -83,7 +83,7 @@ class home extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(11,5,0,5),
                       child: Column(
                         children: [
-                        Container(height: 80,width: 80,child: Image.asset("assets/images/biography.png")),SizedBox(height: 5,),
+                        InkWell(onTap: (){}, child:Container(height: 80,width: 80,child: Image.asset("assets/images/biography.png"))),SizedBox(height: 5,),
                         Text("Biography")
                         
                           ],
@@ -92,7 +92,7 @@ class home extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(13,5,0,5),
                       child: Column(
                         children: [
-                        Container(height: 80,width: 80,child: Image.asset("assets/images/engineer.png"),),SizedBox(height: 5,),
+                        InkWell(onTap: (){}, child: Container(height: 80,width: 80,child: Image.asset("assets/images/engineer.png"),)),SizedBox(height: 5,),
                         Text("Engineering")
                           ],
                       ),
@@ -101,7 +101,7 @@ class home extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(13,5,0,5),
                       child: Column(
                         children: [
-                        Container(height: 80,width: 80,child: Image.asset("assets/images/magzine.png")),SizedBox(height: 5,),
+                        InkWell(onTap: (){}, child: Container(height: 80,width: 80,child: Image.asset("assets/images/magzine.png"))),SizedBox(height: 5,),
                         Text("Magzines")
                           ],
                       ),
@@ -110,9 +110,11 @@ class home extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(13,5,0,5),
                       child: Column(
                         children: [
-                        Container(
-                          
-                          height: 80,width: 80,child: Image.asset("assets/images/aboutus.png")),SizedBox(height: 5,),
+                        InkWell(onTap: (){},
+                          child: Container(
+                            
+                            height: 80,width: 80,child: Image.asset("assets/images/aboutus.png")),
+                        ),SizedBox(height: 5,),
                         Text("About Us")
                           ],
                       ),
