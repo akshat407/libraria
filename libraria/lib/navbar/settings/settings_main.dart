@@ -12,6 +12,7 @@ class setting_main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: AIColors.primaryColor1,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(350),
         child: Container(
