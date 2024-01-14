@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:libraria/home/home.dart';
+import 'package:libraria/navbar/home/home.dart';
 
 class Login extends StatelessWidget {
   @override

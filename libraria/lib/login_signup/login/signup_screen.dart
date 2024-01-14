@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:libraria/home/aboutus.dart';
-import 'package:libraria/home/home.dart';
+import 'package:libraria/navbar/home/aboutus.dart';
+import 'package:libraria/navbar/home/home.dart';
 import 'package:libraria/login_signup/login/Login.dart';
 import 'package:libraria/login_signup/login/register1.dart';
-import 'package:libraria/navbar/news_main.dart';
+// <<<<<<< HEAD
+import 'package:libraria/navbar/news/news_main.dart';
+// import 'package:libraria/navbar/news/news_main.dart';
+
+
+// >>>>>>> feat/srt
 
 class loginsignup extends StatelessWidget {
   const loginsignup({super.key});
@@ -136,7 +141,7 @@ class loginsignup extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: (){
-                            Get.to(newsmain());
+                          // Get.to(newsmain());
                           }, 
                           child: Text("Sign in with Google",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),)),
                           

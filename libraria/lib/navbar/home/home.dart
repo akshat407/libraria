@@ -1,9 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:libraria/home/aboutus.dart';
-import 'package:libraria/home/panels.dart';
-import 'package:libraria/navbar/nav_book.dart';
+import 'package:libraria/navbar/books/nav_book.dart';
+import 'package:libraria/navbar/home/aboutus.dart';
+import 'package:libraria/navbar/home/panels.dart';
+// import 'package:libraria/navbar/nav_book.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:libraria/utils/color.dart';
