@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:libraria/navbar/books/nav_book.dart';
 import 'package:libraria/navbar/home/aboutus.dart';
 import 'package:libraria/navbar/home/panels.dart';
+import 'package:libraria/navbar/settings/setting_main.dart';
 // import 'package:libraria/navbar/nav_book.dart';
 
 import 'package:velocity_x/velocity_x.dart';
@@ -44,6 +45,7 @@ class home extends StatelessWidget {
         onTap: (index){
           if(index==0) Get.to(()=>home());
           else if(index==1) Get.to(()=>nav_book());
+          else if(index==4) Get.to(()=>setting_main());
 
 
 
