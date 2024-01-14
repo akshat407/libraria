@@ -1,7 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:libraria/navbar/home/aboutus.dart';
+import 'package:libraria/home/aboutus.dart';
+import 'package:libraria/home/panels.dart';
+import 'package:libraria/navbar/nav_book.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:libraria/utils/color.dart';
@@ -34,7 +36,10 @@ class home extends StatelessWidget {
       backgroundColor: AIColors.primaryColor1,
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: AIColors.primaryColor1,
-        animationDuration: Duration(milliseconds: 300),
+        animationDuration: Duration(milliseconds: 200),
+        onTap: (book) {
+          Get.to(()=>nav_book());
+        },  
         items: [
           Icon(Icons.home),
           Icon(Icons.book),
@@ -84,7 +89,7 @@ class home extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(11,5,0,5),
                       child: Column(
                         children: [
-                        InkWell(onTap: (){}, child:Container(height: 80,width: 80,child: Image.asset("assets/images/biography.png"))),SizedBox(height: 5,),
+                        InkWell(onTap: (){Get.to(()=>panels());}, child:Container(height: 80,width: 80,child: Image.asset("assets/images/biography.png"))),SizedBox(height: 5,),
                         Text("Biography")
                         
                           ],
@@ -111,9 +116,7 @@ class home extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(13,5,0,5),
                       child: Column(
                         children: [
-                        InkWell(onTap: (){
-                          Get.to(aboutus());
-                        },
+                        InkWell(onTap: (){Get.to(aboutus());},
                           child: Container(
                             
                             height: 80,width: 80,child: Image.asset("assets/images/aboutus.png")),

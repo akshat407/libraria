@@ -26,7 +26,7 @@ class aboutus extends StatelessWidget {
           // width: MediaQuery.of(context).size.width,
           alignment: Alignment.center,
           child: Text(
-            "Welcome to the new era:Libraria",
+            "Welcome to the new era 'Libraria'",
             style: TextStyle(
               color: AIColors.primaryColor2,
               fontWeight: FontWeight.bold,
