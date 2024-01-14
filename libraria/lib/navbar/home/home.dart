@@ -36,16 +36,14 @@ final screens=[
 ];
   @override
   Widget build(BuildContext context) {
-    
     final items=[
-      Icon(Icons.home),
-      Icon(Icons.book),
-      Icon(Icons.newspaper),
-      Icon(Icons.notification_important),
-      Icon(Icons.settings),
-
-
-    ];
+          Icon(Icons.home),
+          Icon(Icons.book),
+          Icon(Icons.newspaper),
+          Icon(Icons.notification_important),
+          Icon(Icons.settings),
+    
+    ];      
     return Scaffold(
       backgroundColor: AIColors.primaryColor1,
       body: screens[index],
@@ -62,10 +60,9 @@ final screens=[
           }),
           
        ),
-        
-      
-        
-      
-    );
+    );      
+  
+
+
   }
 }
