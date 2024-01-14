@@ -6,10 +6,11 @@ import 'package:libraria/navbar/books/nav_book.dart';
 import 'package:libraria/navbar/home/aboutus.dart';
 import 'package:libraria/navbar/home/home_screen.dart';
 import 'package:libraria/navbar/home/panels.dart';
+import 'package:libraria/navbar/settings/settings_main.dart';
 import 'package:libraria/navbar/news/news_main.dart';
 import 'package:libraria/navbar/notifications/notification_main.dart';
 import 'package:libraria/navbar/settings/settings_main.dart';
-// import 'package:libraria/navbar/nav_book.dart';
+
 
 import 'package:velocity_x/velocity_x.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -36,14 +37,15 @@ final screens=[
 ];
   @override
   Widget build(BuildContext context) {
-    final items=[
+    final items= [
           Icon(Icons.home),
           Icon(Icons.book),
           Icon(Icons.newspaper),
           Icon(Icons.notification_important),
           Icon(Icons.settings),
-    
-    ];      
+
+
+    ];
     return Scaffold(
       backgroundColor: AIColors.primaryColor1,
       body: screens[index],
