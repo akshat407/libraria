@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+
+
 import 'package:libraria/navbar/news/trending.dart';
-import 'package:libraria/navbar/news/trending.dart';
+
 import 'package:libraria/utils/color.dart';
 
 class newsmain extends StatefulWidget {
