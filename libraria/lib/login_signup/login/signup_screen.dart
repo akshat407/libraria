@@ -4,7 +4,7 @@ import 'package:libraria/home/aboutus.dart';
 import 'package:libraria/home/home.dart';
 import 'package:libraria/login_signup/login/Login.dart';
 import 'package:libraria/login_signup/login/register1.dart';
-import 'package:libraria/news/news_main.dart';
+import 'package:libraria/navbar/news_main.dart';
 
 class loginsignup extends StatelessWidget {
   const loginsignup({super.key});
