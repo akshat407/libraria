@@ -37,9 +37,19 @@ class home extends StatelessWidget {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: AIColors.primaryColor1,
         animationDuration: Duration(milliseconds: 200),
+<<<<<<< HEAD:libraria/lib/navbar/home/home.dart
         onTap: (book) {
           Get.to(()=>nav_book());
         },  
+=======
+        onTap: (index){
+          if(index==0) Get.to(()=>home());
+          else if(index==1) Get.to(()=>nav_book());
+
+
+
+        },
+>>>>>>> feat/srt:libraria/lib/home/home.dart
         items: [
           Icon(Icons.home),
           Icon(Icons.book),
