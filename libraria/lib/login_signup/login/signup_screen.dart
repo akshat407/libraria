@@ -4,12 +4,13 @@ import 'package:libraria/navbar/home/aboutus.dart';
 import 'package:libraria/navbar/home/home.dart';
 import 'package:libraria/login_signup/login/Login.dart';
 import 'package:libraria/login_signup/login/register1.dart';
-// <<<<<<< HEAD
+
 import 'package:libraria/navbar/news/news_main.dart';
 // import 'package:libraria/navbar/news/news_main.dart';
 
 
-// >>>>>>> feat/srt
+
+
 
 class loginsignup extends StatelessWidget {
   const loginsignup({super.key});

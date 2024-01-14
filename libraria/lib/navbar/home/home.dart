@@ -1,10 +1,12 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'package:libraria/navbar/books/nav_book.dart';
 import 'package:libraria/navbar/home/aboutus.dart';
 import 'package:libraria/navbar/home/panels.dart';
 // import 'package:libraria/navbar/nav_book.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:libraria/utils/color.dart';
@@ -38,6 +40,7 @@ class home extends StatelessWidget {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: AIColors.primaryColor1,
         animationDuration: Duration(milliseconds: 200),
+
         onTap: (index){
           if(index==0) Get.to(()=>home());
           else if(index==1) Get.to(()=>nav_book());
@@ -45,6 +48,7 @@ class home extends StatelessWidget {
 
 
         },
+
         items: [
           Icon(Icons.home),
           Icon(Icons.book),
