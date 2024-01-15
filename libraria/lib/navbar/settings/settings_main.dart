@@ -117,7 +117,7 @@ class _setting_mainState extends State<setting_main> {
                   },
                   child: Container(
                     padding: EdgeInsets.only(top: 20),
-                    child: Image.asset("assets/images/systemupdate.png",height:70 ,),
+                    child: Image.asset("assets/images/password.png",height:70 ,),
                   
                   
                   ),

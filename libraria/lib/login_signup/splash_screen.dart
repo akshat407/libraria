@@ -18,7 +18,7 @@ void initState()
 }
 
 _navigatehome()async{
-  await Future.delayed(Duration(milliseconds: 1500),(){});
+  await Future.delayed(Duration(milliseconds: 2000),(){});
   Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) =>  loginsignup())));
 }
 

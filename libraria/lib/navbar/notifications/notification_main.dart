@@ -12,7 +12,7 @@ class notifi extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
-        title: Text("EXPLORE",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+        title: Text("NOTIFICATION",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
       ),
 
       body: ListView.builder(
@@ -30,25 +30,23 @@ class notifi extends StatelessWidget {
                   width: MediaQuery.sizeOf(context).width,
                   margin: EdgeInsets.only(top: 20, left: 10, right: 10),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
+                      
                       color: containerColor,
                       border: Border.all(color: Colors.black)),
                       padding: EdgeInsets.all(10),
-                  child: Center(
-                    child: Column(
-                      
-                      children: [
-                        Text(
-                          "The ultimate e-libra",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: textColor,
-                          ),
+                  child: Column(
+                    
+                    children: [
+                      Text(
+                        ">The ultimate e-libra",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: textColor,
                         ),
-                        
-                      ],
-                    ),
+                      ),
+                      
+                    ],
                   )),
               ),
             );
