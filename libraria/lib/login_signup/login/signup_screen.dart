@@ -211,7 +211,8 @@ User? user;
                 iconSize: 30,
                 text: "Continue with Google",
                 onPressed: () {
-                  handleGoogleSign();
+                  // handleGoogleSign();
+                  Get.to(home());
                 },
                 splashColor: AIColors.primaryColor2,
                 showText: true,
