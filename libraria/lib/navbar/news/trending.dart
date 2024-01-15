@@ -10,8 +10,14 @@ class trending extends StatefulWidget {
 class _trendingState extends State<trending> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  SingleChildScrollView(
       //yaha se shuru karna hai
+      child:Column(
+        children: [
+          
+        ],
+      ) ,
+
     );
   }
 }

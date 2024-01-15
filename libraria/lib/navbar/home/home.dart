@@ -50,7 +50,7 @@ final screens=[
       backgroundColor: AIColors.primaryColor1,
       body: screens[index],
        bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: AIColors.primaryColor1,
+        backgroundColor: Colors.transparent,
         animationDuration: Duration(
           milliseconds: 300), 
           
