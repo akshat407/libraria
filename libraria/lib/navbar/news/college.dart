@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:libraria/utils/color.dart';
 
-class trending extends StatelessWidget {
-  const trending({super.key});
+class college extends StatelessWidget {
+  const college({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AIColors.primaryColor1,
       
+
       body: ListView.builder(
         itemCount: 20,
         itemBuilder: (BuildContext context, int index){

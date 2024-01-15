@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:libraria/navbar/news/college.dart';
 
 
 
@@ -56,7 +57,7 @@ class _newsmainState extends State<newsmain>with TickerProviderStateMixin {
         controller: _tabController,
         children: [
         Center(child: trending()),
-        Center(child: Text("It is collge  page"),)
+        Center(child: college(),)
       ]
       ),
     );
