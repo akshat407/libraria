@@ -75,7 +75,7 @@ class newscont extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>details(newsurl: newsurl)));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>details(newsurl: newsurl)));
                     },
                     child: Text("readmore")),
               ),
