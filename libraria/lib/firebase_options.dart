@@ -65,5 +65,6 @@ class DefaultFirebaseOptions {
     storageBucket: 'libaria.appspot.com',
     iosClientId: '37438404781-eckugg18bu3niludss7js8m5ld70btq1.apps.googleusercontent.com',
     iosBundleId: 'com.example.libraria',
+    
   );
 }

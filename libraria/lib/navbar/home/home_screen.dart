@@ -14,11 +14,33 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
+  List bio = ["https://drive.google.com/uc?export=view&id=1jp0iJ1MSjt8EpjTlLkX0AvjuFy1WNb-L",
+  "https://drive.google.com/uc?export=view&id=164N4ItcAsG2I4-zJE3ol1SPofDXiw6Lk",
+  "https://drive.google.com/uc?export=view&id=11EeIK0QDOZZW2gBfAeRtS-hVn2doYxB9",
+  "https://drive.google.com/uc?export=view&id=1uUsR6tHNDGiP8MbA1SmJxrpBJa4C0CFl",
+  "https://drive.google.com/uc?export=view&id=1oeviZJlEuTNbdiSG2pqeKR9ZupMFwbs0"];
+
+  List mag = ["https://drive.google.com/uc?export=view&id=1wp0mkOc-VuikLLAQ8w6UsQn1jM5yijla",
+  "https://drive.google.com/uc?export=view&id=18fifET9v2-UsvpCtKyfcRd_PeoIIATYE",
+  "https://drive.google.com/uc?export=view&id=1DAfi28V3xuwoQoHIziDn35XUEvbGhAK3",
+  "https://drive.google.com/uc?export=view&id=1OEdTOCgPxB9Pwh3lAv1daG2BhXj9rpB9",
+  "https://drive.google.com/uc?export=view&id=11WgDU9IYC1EGCnzimjxKk1XV6Kb3chrv"];
+
+  List eng = ["https://drive.google.com/uc?export=view&id=1d95HxOtiUvfFQDcwSAVlzPIkU5R4vfHL",
+  "https://drive.google.com/uc?export=view&id=1HPprD7g_IeZy4_u7GEASrZa-7csY_SY2",
+  "https://drive.google.com/uc?export=view&id=1w6PgMM27u3FahxUgJL2k1p1GdHansIkl",
+  "https://drive.google.com/uc?export=view&id=1RyLVswYNScjVm72rR9xCVQhrQRZdMunf",
+  "https://drive.google.com/uc?export=view&id=1rXg2kAdHe_MMSmesAiGXvRf2YVSNVJ2r",
+  "https://drive.google.com/uc?export=view&id=1DLRUcS4t4hdqOhIvBR-_Sj6SuESEfpr8",
+  "https://drive.google.com/uc?export=view&id=1YeiFGjhGfTRhDt9MKCdDgFj9IfLNv7ls",
+  "https://drive.google.com/uc?export=view&id=1hrnhdiB_somLE0Zfkk05jqkBuIWMxrR6",
+  "https://drive.google.com/uc?export=view&id=1oLbMh7jkCCkqWJ6qyaZKM_LGU6X04vgo"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.transparent,foregroundColor: Colors.white,
         elevation: 0,
         
         title: Text('HOME',style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.bold),),
@@ -84,7 +106,7 @@ class _homescreenState extends State<homescreen> {
                       padding: const EdgeInsets.fromLTRB(11,5,0,5),
                       child: Column(
                         children: [
-                        InkWell(onTap: (){Get.to(()=>panels());}, child:Container(height: 80,width: 80,child: Image.asset("assets/images/biography.png"))),SizedBox(height: 5,),
+                        InkWell(onTap: (){Get.to(()=>panels(intcnt: 5,list: bio,));}, child:Container(height: 80,width: 80,child: Image.asset("assets/images/biography.png"))),SizedBox(height: 5,),
                         Text("Biography")
                         
                           ],
@@ -93,7 +115,7 @@ class _homescreenState extends State<homescreen> {
                       padding: const EdgeInsets.fromLTRB(13,5,0,5),
                       child: Column(
                         children: [
-                        InkWell(onTap: (){}, child: Container(height: 80,width: 80,child: Image.asset("assets/images/engineer.png"),)),SizedBox(height: 5,),
+                        InkWell(onTap: (){Get.to(()=>panels(intcnt: 9,list: eng,));}, child: Container(height: 80,width: 80,child: Image.asset("assets/images/engineer.png"),)),SizedBox(height: 5,),
                         Text("Engineering")
                           ],
                       ),
@@ -102,7 +124,7 @@ class _homescreenState extends State<homescreen> {
                       padding: const EdgeInsets.fromLTRB(13,5,0,5),
                       child: Column(
                         children: [
-                        InkWell(onTap: (){}, child: Container(height: 80,width: 80,child: Image.asset("assets/images/magzine.png"))),SizedBox(height: 5,),
+                        InkWell(onTap: (){Get.to(()=>panels(intcnt: 5,list: mag,));}, child: Container(height: 80,width: 80,child: Image.asset("assets/images/magzine.png"))),SizedBox(height: 5,),
                         Text("Magzines")
                           ],
                       ),
