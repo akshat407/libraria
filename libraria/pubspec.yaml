@@ -43,6 +43,8 @@ dependencies:
   firebase_core: ^2.24.2
   firebase_auth: ^4.16.0
   custom_signin_buttons: ^1.0.0
+  http: ^1.2.0
+  webview_flutter: ^3.0.4
 
 dev_dependencies:
   flutter_test:

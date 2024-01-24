@@ -5,6 +5,7 @@ import 'package:libraria/navbar/news/college.dart';
 
 
 import 'package:libraria/navbar/news/trending.dart';
+import 'package:libraria/navbar/news/trending_new.dart';
 
 import 'package:libraria/utils/color.dart';
 
@@ -56,7 +57,7 @@ class _newsmainState extends State<newsmain>with TickerProviderStateMixin {
       body: TabBarView(
         controller: _tabController,
         children: [
-        Center(child: trending()),
+        Center(child: HomeScreen()),
         Center(child: college(),)
       ]
       ),
