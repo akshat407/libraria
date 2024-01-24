@@ -1,0 +1,28 @@
+Center(
+              child: FittedBox(
+                child: Container(
+
+                  
+                  width: MediaQuery.sizeOf(context).width,
+                  margin: EdgeInsets.only(top: 20, left: 10, right: 10),
+                  decoration: BoxDecoration(
+                      
+                      color: ,
+                      border: Border.all(color: Colors.black)),
+                      padding: EdgeInsets.all(10),
+                  child: Column(
+                    
+                    children: [
+                      Text(
+                        ">The ultimate e-libra",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          // color: textColor,
+                        ),
+                      ),
+                      
+                    ],
+                  )),
+              ),
+      )
