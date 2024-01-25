@@ -85,7 +85,7 @@ class nav_book extends StatelessWidget {
                   children:[
                 
                   Expanded(
-                    child: InkWell(onTap: (){Get.to(viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1kS4IUGy9o0ywJ3G4N8jrkwdbU8plvv_S', name: 'CD',));},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1kS4IUGy9o0ywJ3G4N8jrkwdbU8plvv_S', name: 'CD',));},
                       child: Container(
                         margin: EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,
@@ -102,7 +102,7 @@ class nav_book extends StatelessWidget {
                   ),
                   
                   Expanded(
-                    child: InkWell(onTap: (){Get.to(viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1shEG9l3W2c7B0T6nvcf6rlPXp6ZhqHuj', name: 'AI',));},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1shEG9l3W2c7B0T6nvcf6rlPXp6ZhqHuj', name: 'AI',));},
                       child: Container(margin:EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,padding: EdgeInsets.fromLTRB(20,20,20,30),
                         child: Text("A.I.",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize:24,fontWeight:FontWeight.bold,color:Colors.black)),
@@ -121,7 +121,7 @@ class nav_book extends StatelessWidget {
                   children:[
                 
                   Expanded(
-                    child: InkWell(onTap: (){Get.to(viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1j4IJ29UVq3i22AiLYvPcRpFErUsOphsv', name: 'IOT',));},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1j4IJ29UVq3i22AiLYvPcRpFErUsOphsv', name: 'IOT',));},
                       child: Container(
                         margin: EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,
@@ -138,7 +138,7 @@ class nav_book extends StatelessWidget {
                   ),
                   
                   Expanded(
-                    child: InkWell(onTap: (){Get.to(viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1AcvKPRTX2r9iCk7ngFqj7DbqhzW7dYCK', name: 'CRP',));},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1AcvKPRTX2r9iCk7ngFqj7DbqhzW7dYCK', name: 'CRP',));},
                       child: Container(margin:EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,padding: EdgeInsets.fromLTRB(20,20,20,30),
                         child: Text("CRP",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize:24,fontWeight:FontWeight.bold,color:Colors.black)),
@@ -157,7 +157,7 @@ class nav_book extends StatelessWidget {
                   children:[
                 
                   Expanded(
-                    child: InkWell(onTap: (){Get.to(viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=12WrYCM68w12s4_GzFxu2Hock87koNT3U',name: "AA Formula sheet"));},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=12WrYCM68w12s4_GzFxu2Hock87koNT3U',name: "AA Formula sheet"));},
                       child: Container(
                         margin:EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,
@@ -174,7 +174,7 @@ class nav_book extends StatelessWidget {
                   ),
                   
                   Expanded(
-                    child: InkWell(onTap: (){Get.to(viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1kS4IUGy9o0ywJ3G4N8jrkwdbU8plvv_S', name: 'CD',));},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1uFa2O9wLaixNazc5ukLNzTABH6DChXqJ', name: 'CD',));},
                       child: Container(margin:EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,padding: EdgeInsets.fromLTRB(20,20,20,30),
                         child: Text("BCS",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize:24,fontWeight:FontWeight.bold,color:Colors.black)),
@@ -205,21 +205,21 @@ class nav_book extends StatelessWidget {
                   
                     child: Row(children: [
                     Expanded(
-                      child: InkWell(onTap: (){},
+                      child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl: "https://drive.google.com/uc?export=view&id=1QTN-Y1JiGk-Xli7hJqJc78P1AjMD6lux", name: 'CIE 1 Papers'));},
                         child: Container(height: 50,width: 50,padding: EdgeInsets.fromLTRB(5,10,5,5),margin: EdgeInsets.all(10),
                         child: Text("CIE 1",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
                         decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white),),
                       ),
                     ),
                     Expanded(
-                      child: InkWell(onTap: (){},
+                      child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl: "https://drive.google.com/uc?export=view&id=1w2dfMGXOjIG3g5HM-0t8O3F8TfOWa-8V", name: 'CIE 2 Papers'));},
                         child: Container(height: 50,width: 50,padding: EdgeInsets.fromLTRB(5,10,5,5),margin: EdgeInsets.all(10),
                         child: Text("CIE 2",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
                         decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white),),
                       ),
                     ),
                     Expanded(
-                      child: InkWell(onTap: (){},
+                      child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl: "https://drive.google.com/uc?export=view&id=1_X9ffMzN7Z_0zTBOLi0qQ8vXO0DapTg2", name: 'CIE 3 Papers'));},
                         child: Container(height: 50,width: 50,padding: EdgeInsets.fromLTRB(5,10,5,5),margin: EdgeInsets.all(10),
                         child: Text("CIE 3",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
                         decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white),),
@@ -239,7 +239,7 @@ class nav_book extends StatelessWidget {
                   children:[
                 
                   Expanded(
-                    child: InkWell(onTap: (){},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl: "https://drive.google.com/uc?export=view&id=1uFa2O9wLaixNazc5ukLNzTABH6DChXqJ", name: "CD Semester Papers"));},
                       child: Container(
                         margin: EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,
@@ -256,7 +256,7 @@ class nav_book extends StatelessWidget {
                   ),
                   
                   Expanded(
-                    child: InkWell(onTap: (){},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl: "https://drive.google.com/uc?export=view&id=1uFa2O9wLaixNazc5ukLNzTABH6DChXqJ", name: "AI Semester Papers"));},
                       child: Container(margin:EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,padding: EdgeInsets.fromLTRB(20,20,20,30),
                         child: Text("A.I.",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize:24,fontWeight:FontWeight.bold,color:Colors.black)),
@@ -275,7 +275,7 @@ class nav_book extends StatelessWidget {
                   children:[
                 
                   Expanded(
-                    child: InkWell(onTap: (){},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl: "https://drive.google.com/uc?export=view&id=1OPLfEGqENpAzqpsyMyY8QBPFSQ5K43AE", name: "IOT Semester Papers"));},
                       child: Container(
                         margin: EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,
@@ -292,7 +292,7 @@ class nav_book extends StatelessWidget {
                   ),
                   
                   Expanded(
-                    child: InkWell(onTap: (){},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl: "https://drive.google.com/uc?export=view&id=1uFa2O9wLaixNazc5ukLNzTABH6DChXqJ", name: "CRP Semester Papers"));},
                       child: Container(margin:EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,padding: EdgeInsets.fromLTRB(20,20,20,30),
                         child: Text("CRP",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize:24,fontWeight:FontWeight.bold,color:Colors.black)),
@@ -311,7 +311,7 @@ class nav_book extends StatelessWidget {
                   children:[
                 
                   Expanded(
-                    child: InkWell(onTap: (){},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl: "https://drive.google.com/uc?export=view&id=1kivUV-0Bc5Cgu-G4V3WD3z9Warryp3Tg", name: "AA Semester Papers"));},
                       child: Container(
                         margin:EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,
@@ -328,7 +328,7 @@ class nav_book extends StatelessWidget {
                   ),
                   
                   Expanded(
-                    child: InkWell(onTap: (){},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl: "https://drive.google.com/uc?export=view&id=1uFa2O9wLaixNazc5ukLNzTABH6DChXqJ", name: "BCS Semester Papers"));},
                       child: Container(margin:EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,padding: EdgeInsets.fromLTRB(20,20,20,30),
                         child: Text("BCS",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize:24,fontWeight:FontWeight.bold,color:Colors.black)),
@@ -380,8 +380,11 @@ class nav_book extends StatelessWidget {
                     ),
                     ],)
                     ),
-                    SizedBox(height: 20,)
-      
+                    SizedBox(height: 20,),
+                    
+                    ElevatedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(AIColors.primaryColor2)),
+                     child: Text("Subject Notes Centre >",style: GoogleFonts.poppins(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),)),
+                     SizedBox(height: 30,)    
                     
           
             

@@ -1,13 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:libraria/navbar/home/home.dart';
-import 'package:libraria/login_signup/login/register2.dart';
+import 'package:libraria/navbar/home/home_screen.dart';
 
+class RoundedTextField extends StatelessWidget {
+  final String placeholder;
+ final  controller;
+  const RoundedTextField({super.key, required this.placeholder, required this.controller});
 
-class register1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Container(
+      width: 300,
+      padding: EdgeInsets.symmetric(horizontal: 8),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(50),
+      ),
+      child: TextField(
+        textAlign: TextAlign.center,
+        decoration: InputDecoration(
+          hintText: placeholder,
+          border: InputBorder.none,
+        ),
+      ),
+    );
+  }
+}
+
+class registernew extends StatefulWidget {
+  const registernew({super.key});
+
+  @override
+  State<registernew> createState() => _registernewState();
+}
+
+class _registernewState extends State<registernew> {
+
+ FirebaseAuth auth = FirebaseAuth.instance ; 
+ var emailController = TextEditingController();
+ var passwordController = TextEditingController();
+
+ createuser({email,password})async{
+  UserCredential userCredential = await auth.createUserWithEmailAndPassword(email: email, password: password);
+ }
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
       body: 
         Column(
           children: [
@@ -46,14 +87,14 @@ class register1 extends StatelessWidget {
                 color: Color(0xFF10596D),
                 child:  Column(               
                   children: [
-                    RoundedTextField(placeholder: 'Full Name'),
+                    
+                    
+                    RoundedTextField(placeholder: 'E-mail',controller: emailController,),
                     SizedBox(height: 20),
-                    RoundedTextField(placeholder: 'E-mail'),
+                    RoundedTextField(placeholder: 'Password',controller: passwordController,),
                     SizedBox(height: 20),
-                    RoundedTextField(placeholder: 'Phone Number'),
-                    SizedBox(height: 20),
-                    RoundedTextField(placeholder: 'USN'),
-                    SizedBox(height: 50),
+                    
+                    
                     Container(
                       width: 350,
                       height: 45,
@@ -63,8 +104,9 @@ class register1 extends StatelessWidget {
                       ),
                       child: Center(
                           child: TextButton(
-                            onPressed: (){
-                              Get.to(() => register2());
+                            onPressed: ()async{
+                             await createuser(email:emailController.text, password:passwordController.text);
+                             Get.to(()=>homescreen());
                             } , child: Text(
                               "Next -> ",
                               style: TextStyle(
@@ -92,33 +134,7 @@ class register1 extends StatelessWidget {
           ],
         ),
       );
-    
   }
 }
 
-//this is a Stateless Widget that will create a rounded rectangle now we will 
-//use this rectangle to place two units here which is very imp here 
-class RoundedTextField extends StatelessWidget {
-  final String placeholder;
 
-  const RoundedTextField({Key? key, required this.placeholder}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 300,
-      padding: EdgeInsets.symmetric(horizontal: 8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(50),
-      ),
-      child: TextField(
-        textAlign: TextAlign.center,
-        decoration: InputDecoration(
-          hintText: placeholder,
-          border: InputBorder.none,
-        ),
-      ),
-    );
-  }
-}

@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:libraria/login_signup/login/registernew.dart';
 import 'package:libraria/navbar/home/aboutus.dart';
 import 'package:libraria/navbar/home/home.dart';
 import 'package:libraria/login_signup/login/Login.dart';
@@ -114,7 +115,7 @@ User? user;
                     bottomRight: Radius.circular(50))),
             child: TextButton(
               onPressed: () {
-                Get.to(register1());
+                Get.to(()=>registernew());
               },
               child: Text("SIGNUP",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),),
             ),
