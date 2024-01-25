@@ -45,6 +45,8 @@ dependencies:
   custom_signin_buttons: ^1.0.0
   http: ^1.2.0
   webview_flutter: ^3.0.4
+  syncfusion_flutter_pdfviewer: ^24.1.47
+  url_launcher: ^6.1.11
 
 dev_dependencies:
   flutter_test:
