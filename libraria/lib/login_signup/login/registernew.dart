@@ -39,33 +39,35 @@ class registernew extends StatefulWidget {
 
 class _registernewState extends State<registernew> {
 
- bool loading = false;
-  final _formKey = GlobalKey<FormState>();
-  final emailcontroller = TextEditingController();
-  final passwordcontroller = TextEditingController();
-  final namecontroller=TextEditingController();
-  FirebaseAuth _auth = FirebaseAuth.instance;
+ FirebaseAuth auth = FirebaseAuth.instance ; 
+ var emailController = TextEditingController();
+ var passwordController = TextEditingController();
+ final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  void login() {
-    setState(() {
-      loading = true;
-    });
-    _auth.createUserWithEmailAndPassword(
-            email: emailcontroller.text,
-            password: passwordcontroller.text.toString())
-        .then((value) {
-          utils().toastmessege('Signup successfully, now login with this credentials');
-      setState(() {
-        loading = false;
-      });
-    }).onError((error, stackTrace) {
-      debugPrint(error.toString());
-      utils().toastmessege(error.toString());
-      setState(() {
-        loading = false;
-      });
-    });
+ createuser({email,password})async{
+  
+
+  if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      try {
+        UserCredential userCredential = await auth.createUserWithEmailAndPassword(
+          email: email,
+          password: password,
+        );
+        // If the user creation is successful, you can navigate to another page or show a success message
+        // For example:
+        // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+      } catch (e) {
+        // If there is an error during user creation, you can handle it here
+        print(e.toString());
+        // You can also show an error message to the user
+        // For example:
+        // Scaffold.of(context).showSnackBar(SnackBar(content: Text(e.message)));
+      }
+    }
   }
+  
+  
 
   @override
   Widget build(BuildContext context) {
@@ -106,45 +108,49 @@ class _registernewState extends State<registernew> {
                 padding: EdgeInsets.fromLTRB(16,100,16,16),
                 margin: EdgeInsets.only(top: 15),
                 color: Color(0xFF10596D),
-                child:  Column(               
-                  children: [
-                    
-                    
-                    RoundedTextField(placeholder: 'E-mail',controller: emailcontroller,),
-                    SizedBox(height: 20),
-                    RoundedTextField(placeholder: 'Password',controller: passwordcontroller,),
-                    SizedBox(height: 20),
-                    
-                    
-                    Container(
-                      width: 350,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Center(
-                          child: TextButton(
-                            onPressed: (){
-                             login();
-                            } , child: Text(
-                              "Next -> ",
-                              style: TextStyle(
-                                    fontSize: 18, // Adjust the font size as needed
-                                    color: Colors.black, // Change the text color
-                                    fontWeight: FontWeight.bold, // Adjust the font weight as needed
-                                  ),),
-                          ),
-                      )
-                    ),
-                    SizedBox(height: 60,),
-                    Container(
-                      width: 500,
-                      height: 10,
-                      color: Colors.white,
+                child:  Form(
+                  key: _formKey,
+                  child: Column(               
+                    children: [
                       
-                    )
-                  ],
+                      
+                      RoundedTextField(placeholder: 'E-mail',controller: emailController,),
+                      SizedBox(height: 20),
+                      RoundedTextField(placeholder: 'Password',controller: passwordController,),
+                      SizedBox(height: 20),
+                      
+                      
+                      Container(
+                        width: 350,
+                        height: 45,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Center(
+                            child: TextButton(
+                              onPressed: ()async{
+                               await createuser(email:emailController.text, password:passwordController.text);
+                               Get.to(()=>homescreen());
+                              } , child: Text(
+                                "Next -> ",
+                                style: TextStyle(
+                                      fontSize: 18, // Adjust the font size as needed
+                                      color: Colors.black, // Change the text color
+                                      fontWeight: FontWeight.bold, // Adjust the font weight as needed
+                                    ),),
+                            ),
+                        )
+                      ),
+                      SizedBox(height: 60,),
+                      Container(
+                        width: 500,
+                        height: 10,
+                        color: Colors.white,
+                        
+                      )
+                    ],
+                  ),
                 ),
               
 
