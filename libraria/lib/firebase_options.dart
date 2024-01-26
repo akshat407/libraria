@@ -50,21 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCsoiGRhzrTis_XRrdGdLIVrlWvndDe70A',
-    appId: '1:37438404781:android:3d4332d2d059de335bae24',
-    messagingSenderId: '37438404781',
-    projectId: 'libaria',
-    storageBucket: 'libaria.appspot.com',
+    apiKey: 'AIzaSyAJ9-CBGqJUJnHs3ml4Fb9JzN1ZBj8n99E',
+    appId: '1:319715159930:android:3cc1940cbf2fbdd9aef0c3',
+    messagingSenderId: '319715159930',
+    projectId: 'libraria-cee1a',
+    storageBucket: 'libraria-cee1a.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAu40FWMDMFIaRv6cvWMHCBEn-QYEM4IWY',
-    appId: '1:37438404781:ios:2fc84677a0a94e165bae24',
-    messagingSenderId: '37438404781',
-    projectId: 'libaria',
-    storageBucket: 'libaria.appspot.com',
-    iosClientId: '37438404781-eckugg18bu3niludss7js8m5ld70btq1.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCOH0aTXCCD5ohAO5W7TrKJxj9hhzv9GP0',
+    appId: '1:319715159930:ios:a8f3197d369d6aa2aef0c3',
+    messagingSenderId: '319715159930',
+    projectId: 'libraria-cee1a',
+    storageBucket: 'libraria-cee1a.appspot.com',
     iosBundleId: 'com.example.libraria',
-    
   );
 }

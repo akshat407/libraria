@@ -4,11 +4,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:libraria/login_signup/login/Google_sigin.dart';
+import 'package:libraria/login_signup/login/facebook_sign.dart';
 import 'package:libraria/login_signup/login/registernew.dart';
 import 'package:libraria/navbar/home/aboutus.dart';
 import 'package:libraria/navbar/home/home.dart';
 import 'package:libraria/login_signup/login/Login.dart';
 import 'package:libraria/login_signup/login/register1.dart';
+import 'package:libraria/navbar/home/home_screen.dart';
 
 import 'package:libraria/navbar/news/news_main.dart';
 import 'package:libraria/utils/color.dart';
@@ -198,7 +201,15 @@ User? user;
                 iconSize: 30,
                 // spanish: true,
                 text: "Continue with facebook",
-                onPressed: () {},
+                onPressed: () async {
+                   UserCredential? userCredential = await signInWithFacebook();
+            if (userCredential != null) {
+              print("Facebook sign-in successful!");
+              print("User ID: ${userCredential.user?.uid}");
+            } else {
+              print("Facebook sign-in canceled or failed.");
+                }
+                }
                 // splashColor: Colors.red,
               ),
               const SizedBox(
@@ -211,10 +222,18 @@ User? user;
                 textSize: 20,
                 iconSize: 30,
                 text: "Continue with Google",
-                onPressed: () {
-                  // handleGoogleSign();
-                  Get.to(home());
-                },
+                onPressed: () async {
+    UserCredential? userCredential = await signInWithGoogle();
+    if (userCredential != null) {
+      // Successfully signed in
+      print("Google Sign-In Successful");
+      Get.to(()=>home());
+      print("User: ${userCredential.user}");
+    } else {
+      // Sign in failed
+      print("Google Sign-In Failed");
+    }
+  },
                 splashColor: AIColors.primaryColor2,
                 showText: true,
               ),

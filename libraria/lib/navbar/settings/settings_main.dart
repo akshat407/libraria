@@ -1,11 +1,23 @@
 import 'dart:ffi';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:libraria/login_signup/login/signup_screen.dart';
 import 'package:libraria/navbar/settings/change_pswd.dart';
 import 'package:libraria/utils/color.dart';
 import 'package:velocity_x/velocity_x.dart';
+
+Future<void> signOut() async {
+  await FirebaseAuth.instance.signOut();
+  await GoogleSignIn().signOut();
+  await FacebookAuth.instance.logOut();
+  print("User signed out");
+}
+
 
 class setting_main extends StatefulWidget {
   const setting_main({super.key});
@@ -55,8 +67,10 @@ class _setting_mainState extends State<setting_main> {
             child: Column(
               children: [
                 InkWell(
-                  onTap: () {
-                    
+                  onTap: () async{
+                    await signOut();
+                    // await signOutFacebook();
+                    Get.to(()=>loginsignup());
                   },
                   child: Container(
                     padding: EdgeInsets.only(top: 20),

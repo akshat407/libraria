@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="app_name">libraria</string>  
+<string name="facebook_app_id">355930447201666</string>
+<string name="fb_login_protocol_scheme">fb1355930447201666</string>
+<string name="facebook_client_token">0bdc9492d3c62532cdb03bdc45226a54</string>
+
+
+</resources>

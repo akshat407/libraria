@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:libraria/navbar/home/home.dart';
 import 'package:libraria/navbar/home/home_screen.dart';
+import 'package:libraria/utils/utils.dart';
 
 class RoundedTextField extends StatelessWidget {
   final String placeholder;
@@ -38,13 +39,33 @@ class registernew extends StatefulWidget {
 
 class _registernewState extends State<registernew> {
 
- FirebaseAuth auth = FirebaseAuth.instance ; 
- var emailController = TextEditingController();
- var passwordController = TextEditingController();
+ bool loading = false;
+  final _formKey = GlobalKey<FormState>();
+  final emailcontroller = TextEditingController();
+  final passwordcontroller = TextEditingController();
+  final namecontroller=TextEditingController();
+  FirebaseAuth _auth = FirebaseAuth.instance;
 
- createuser({email,password})async{
-  UserCredential userCredential = await auth.createUserWithEmailAndPassword(email: email, password: password);
- }
+  void login() {
+    setState(() {
+      loading = true;
+    });
+    _auth.createUserWithEmailAndPassword(
+            email: emailcontroller.text,
+            password: passwordcontroller.text.toString())
+        .then((value) {
+          utils().toastmessege('Signup successfully, now login with this credentials');
+      setState(() {
+        loading = false;
+      });
+    }).onError((error, stackTrace) {
+      debugPrint(error.toString());
+      utils().toastmessege(error.toString());
+      setState(() {
+        loading = false;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,9 +110,9 @@ class _registernewState extends State<registernew> {
                   children: [
                     
                     
-                    RoundedTextField(placeholder: 'E-mail',controller: emailController,),
+                    RoundedTextField(placeholder: 'E-mail',controller: emailcontroller,),
                     SizedBox(height: 20),
-                    RoundedTextField(placeholder: 'Password',controller: passwordController,),
+                    RoundedTextField(placeholder: 'Password',controller: passwordcontroller,),
                     SizedBox(height: 20),
                     
                     
@@ -104,9 +125,8 @@ class _registernewState extends State<registernew> {
                       ),
                       child: Center(
                           child: TextButton(
-                            onPressed: ()async{
-                             await createuser(email:emailController.text, password:passwordController.text);
-                             Get.to(()=>homescreen());
+                            onPressed: (){
+                             login();
                             } , child: Text(
                               "Next -> ",
                               style: TextStyle(

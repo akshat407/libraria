@@ -44,9 +44,12 @@ dependencies:
   firebase_auth: ^4.16.0
   custom_signin_buttons: ^1.0.0
   http: ^1.2.0
-  webview_flutter: ^3.0.4
+  webview_flutter: ^4.4.4
   syncfusion_flutter_pdfviewer: ^24.1.47
   url_launcher: ^6.1.11
+  fluttertoast: ^8.2.2
+  google_sign_in: ^6.2.1
+  flutter_facebook_auth: ^6.0.4
 
 dev_dependencies:
   flutter_test:
