@@ -39,7 +39,7 @@ class _panelsState extends State<panels> {
         itemCount: widget.intcnt,
         scrollDirection: Axis.vertical,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          mainAxisExtent:170,crossAxisSpacing: 8,mainAxisSpacing: 10,crossAxisCount: 3),
+          mainAxisExtent:150,crossAxisSpacing: 10,mainAxisSpacing: 15,crossAxisCount: 3),
         itemBuilder: (context, index) {
           return InkWell(
             onTap: (){Get.to(viewpdf(pdfUrl: widget.list[index], name: "Available Books"));},

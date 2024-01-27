@@ -106,7 +106,7 @@ class _versionState extends State<version> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PackageInfoPlus example'),backgroundColor: AIColors.primaryColor2,foregroundColor: Colors.white,
+        title: const Text('APP Info'),backgroundColor: AIColors.primaryColor2,foregroundColor: Colors.white,
         elevation: 4,
       ),
       body: ListView(

@@ -57,7 +57,7 @@ class _newsmainState extends State<newsmain>with TickerProviderStateMixin {
       body: TabBarView(
         controller: _tabController,
         children: [
-        // Center(child: HomeScreen()),
+        Center(child: HomeScreen()),
         Center(child: college(),)
       ]
       ),

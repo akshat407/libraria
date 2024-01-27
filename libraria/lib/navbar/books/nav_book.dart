@@ -44,7 +44,7 @@ class nav_book extends StatelessWidget {
               SizedBox(height: 20,),
               
               Card(
-                color: Colors.white,
+                color: Colors.grey[200],
                 elevation: 8,
                 child: Column(
                 
@@ -55,19 +55,27 @@ class nav_book extends StatelessWidget {
                   children:[
                 
                   Expanded(
-                    child: Container(
-                      margin: EdgeInsets.all(30),
-                      height: 200,width:110,
-                      color: Colors.grey[350],
-                      child: Image.asset("assets/images/pdf.png",fit: BoxFit.fill),
+                    child: InkWell(onTap: () {
+                      Get.to(()=>viewpdf(pdfUrl: 'https://drive.google.com/uc?export=view&id=1dDG1Ah5QHjHnibdpDHsTaw-ffNrpi1JV', name: "CD Unit 1"));
+                    },
+                      child: Container(
+                        margin: EdgeInsets.all(30),
+                        height: 200,width:110,
+                        color: Colors.grey[350],
+                        child: Image.asset("assets/images/image1.jpg",fit: BoxFit.fill),
+                      ),
                     ),
                   ),
                   
                   Expanded(
-                    child: Container(margin: EdgeInsets.all(30),
-                      height: 200,width:110,
-                      color: Colors.grey[350],
-                      child: Image.asset("assets/images/pdf.png",fit: BoxFit.fill,),
+                    child: InkWell(onTap: (){
+                      Get.to(()=>viewpdf(pdfUrl: 'https://drive.google.com/uc?export=view&id=1tOnol5XrZdf87RN5suJ_J0AIc5xlm6RN', name: "CD Unit 2"));
+                    },
+                      child: Container(margin: EdgeInsets.all(30),
+                        height: 200,width:110,
+                        color: Colors.grey[350],
+                        child: Image.asset("assets/images/image2.jpg",fit: BoxFit.fill,),
+                      ),
                     ),
                   ),
                   ]
@@ -177,7 +185,7 @@ class nav_book extends StatelessWidget {
                   ),
                   
                   Expanded(
-                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1uFa2O9wLaixNazc5ukLNzTABH6DChXqJ', name: 'CD',));},
+                    child: InkWell(onTap: (){Get.to(()=>viewpdf(pdfUrl:'https://drive.google.com/uc?export=view&id=1uFa2O9wLaixNazc5ukLNzTABH6DChXqJ', name: 'BCS',));},
                       child: Container(margin:EdgeInsets.fromLTRB(30,30,30,15),
                         height: 80,width:80,padding: EdgeInsets.fromLTRB(20,20,20,30),
                         child: Text("BCS",textAlign: TextAlign.center,style: GoogleFonts.poppins(fontSize:24,fontWeight:FontWeight.bold,color:Colors.black)),
