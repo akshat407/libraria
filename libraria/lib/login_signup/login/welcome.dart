@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:libraria/login_signup/login/Google_sigin.dart';
 import 'package:libraria/login_signup/login/facebook_sign.dart';
-import 'package:libraria/login_signup/login/registernew.dart';
+import 'package:libraria/login_signup/login/signup.dart';
 import 'package:libraria/navbar/home/aboutus.dart';
 import 'package:libraria/navbar/home/home.dart';
 import 'package:libraria/login_signup/login/Login.dart';
-import 'package:libraria/login_signup/login/register1.dart';
+// import 'package:libraria/login_signup/login/register1.dart';
 import 'package:libraria/navbar/home/home_screen.dart';
 
 import 'package:libraria/navbar/news/news_main.dart';

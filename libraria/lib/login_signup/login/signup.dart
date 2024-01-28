@@ -1,12 +1,75 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:libraria/navbar/home/home.dart';
-import 'package:libraria/login_signup/login/Login.dart';
+import 'package:libraria/navbar/home/home_screen.dart';
+import 'package:libraria/utils/utils.dart';
 
-class register2 extends StatelessWidget {
+class RoundedTextField extends StatelessWidget {
+  final String placeholder;
+ final  controller;
+  const RoundedTextField({super.key, required this.placeholder, required this.controller});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Container(
+      width: 300,
+      padding: EdgeInsets.symmetric(horizontal: 8),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(50),
+      ),
+      child: TextField(
+        textAlign: TextAlign.center,
+        decoration: InputDecoration(
+          hintText: placeholder,
+          border: InputBorder.none,
+        ),
+      ),
+    );
+  }
+}
+
+class registernew extends StatefulWidget {
+  const registernew({super.key});
+
+  @override
+  State<registernew> createState() => _registernewState();
+}
+
+class _registernewState extends State<registernew> {
+
+ bool loading = false;
+  final _formKey = GlobalKey<FormState>();
+  final emailcontroller = TextEditingController();
+  final passwordcontroller = TextEditingController();
+  final namecontroller=TextEditingController();
+  FirebaseAuth _auth = FirebaseAuth.instance;
+
+  void Signup() {
+    setState(() {
+      loading = true;
+    });
+    _auth.createUserWithEmailAndPassword(
+            email: emailcontroller.text,
+            password: passwordcontroller.text.toString())
+        .then((value) {
+          utils().toastmessege('Signup successfully, now login with this credentials');
+      setState(() {
+        loading = false;
+      });
+    }).onError((error, stackTrace) {
+      debugPrint(error.toString());
+      utils().toastmessege(error.toString());
+      setState(() {
+        loading = false;
+      });
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
       body: 
         Column(
           children: [
@@ -24,7 +87,7 @@ class register2 extends StatelessWidget {
                   ),
                   SizedBox(height: 10), // Adjust the spacing as needed
                   const Text(
-                    'Student Details',
+                    'Register',
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 35,
@@ -45,18 +108,31 @@ class register2 extends StatelessWidget {
                 color: Color(0xFF10596D),
                 child:  Column(               
                   children: [
-                    RoundedTextField(placeholder: 'Department'),
-                    SizedBox(height: 20),
-                    RoundedTextField(placeholder: 'Semester'),
-                    SizedBox(height: 20),
-                    RoundedTextField(placeholder: 'Password'),
-                    SizedBox(height: 20),
-                    RoundedTextField(placeholder: 'Confirm Password'),
                     
-                    SizedBox(height: 40),
+                    
+                    TextFormField(
+                      controller: emailcontroller,
+                      decoration: InputDecoration(
+                        isDense: true,
+                        labelText: "Email",
+                        hintText: "abc@gmail.com",
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                   TextFormField(
+                      controller: passwordcontroller,
+                      decoration: InputDecoration(
+                        isDense: true,
+                        labelText: "Password",
+                        hintText: "******",
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    
+                    
                     Container(
                       width: 350,
-                      height: 50,
+                      height: 45,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(50),
@@ -64,11 +140,12 @@ class register2 extends StatelessWidget {
                       child: Center(
                           child: TextButton(
                             onPressed: (){
-                              Get.to(() => Login());
+                             Signup();
+                             Get.to(home());
                             } , child: Text(
-                              "Login",
+                              "Next -> ",
                               style: TextStyle(
-                                    fontSize: 24, // Adjust the font size as needed
+                                    fontSize: 18, // Adjust the font size as needed
                                     color: Colors.black, // Change the text color
                                     fontWeight: FontWeight.bold, // Adjust the font weight as needed
                                   ),),
@@ -92,33 +169,7 @@ class register2 extends StatelessWidget {
           ],
         ),
       );
-    
   }
 }
 
-//this is a Stateless Widget that will create a rounded rectangle now we will 
-//use this rectangle to place two units here which is very imp here 
-class RoundedTextField extends StatelessWidget {
-  final String placeholder;
 
-  const RoundedTextField({Key? key, required this.placeholder}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 300,
-      padding: EdgeInsets.symmetric(horizontal: 8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(50),
-      ),
-      child: TextField(
-        textAlign: TextAlign.center,
-        decoration: InputDecoration(
-          hintText: placeholder,
-          border: InputBorder.none,
-        ),
-      ),
-    );
-  }
-}

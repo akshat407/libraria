@@ -1,8 +1,54 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:libraria/navbar/home/home.dart';
+import 'package:libraria/utils/utils.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+
+ Map<String, String> credentials = {
+    'abc@gmail.com': '123456',
+    'xyz@gmail.com': '123456',
+  };
+
+  FirebaseAuth auth=FirebaseAuth  .instance;
+
+  final emailcontroller = TextEditingController();
+  final passwordcontroller = TextEditingController();
+
+   Future<void> login() async {
+    try {
+      final String email = emailcontroller.text.trim();
+      final String password = passwordcontroller.text.trim();
+
+       await auth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      // Navigate to the next screen after successful login
+      User? user = auth.currentUser;
+      if (user != null) {
+        // Navigate to the HomeScreen using Get.to()
+        Get.offAll(() => home());
+    }
+    else {
+        utils().toastmessege("User not found");
+      }
+    } 
+    catch (e) {
+      utils().toastmessege(e.toString());;
+      // Handle error
+    }
+  }
+  
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,14 +85,35 @@ class Login extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.65,
                 //TO EDIT PADDDING SIDE WISE HERE 
-                padding: EdgeInsets.fromLTRB(16,100,16,16),
-                margin: EdgeInsets.only(top: 15),
+                // padding: EdgeInsets.fromLTRB(16,20,16,16),
+                padding: EdgeInsets.only(left: 20,right: 20),
+              
+                // margin: EdgeInsets.only(top: 15),
                 color: Color(0xFF10596D),
                 child:  Column(               
                   children: [
-                    RoundedTextField(placeholder: 'USN'),
+                    // RoundedTextField(placeholder: 'Email'),
+                    TextFormField(
+                      controller: emailcontroller,
+                      decoration: InputDecoration(
+                        isDense: true,
+                        labelText: "Email",
+                        hintText: "abc@gmail.com",
+                      ),
+                    ),
                     SizedBox(height: 40),
-                    RoundedTextField(placeholder: 'Password'),
+                    TextFormField(
+                      controller: passwordcontroller,
+                      
+                      decoration: InputDecoration(
+                        focusColor: Colors.white,
+                        fillColor: Colors.white,
+                        
+                        isDense: true,
+                        labelText: "Password",
+                        hintText: "abc@gmail.com",
+                      ),
+                    ),
                     SizedBox(height: 80),
                     Container(
                       width: 350,
@@ -58,7 +125,8 @@ class Login extends StatelessWidget {
                       child: Center(
                           child: TextButton(
                             onPressed: (){
-                              Get.to(() => home());
+                              login();
+                              
                             } , child: Text(
                               "Login",
                               style: TextStyle(
@@ -69,13 +137,13 @@ class Login extends StatelessWidget {
                           ),
                       )
                     ),
-                    SizedBox(height: 60,),
-                    Container(
-                      width: 500,
-                      height: 10,
-                      color: Colors.white,
+                    // SizedBox(height: 60,),
+                    // Container(
+                    //   width: 500,
+                    //   height: 10,
+                    //   color: Colors.white,
                       
-                    )
+                    // )
                   ],
                 ),
               

@@ -6,17 +6,31 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:libraria/login_signup/login/signup_screen.dart';
+import 'package:libraria/login_signup/login/welcome.dart';
 import 'package:libraria/navbar/settings/change_pswd.dart';
 import 'package:libraria/utils/color.dart';
+import 'package:libraria/utils/utils.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 Future<void> signOut() async {
-  await FirebaseAuth.instance.signOut();
+ try {
+    await FirebaseAuth.instance.signOut();
   await GoogleSignIn().signOut();
   await FacebookAuth.instance.logOut();
-  print("User signed out");
+  utils().toastmessege("sign Out successfully");
+ } catch (e) {
+  utils().toastmessege(e.toString());
+   
+ }
 }
+// Future<void> _signOut() async {
+//     try {
+//       await FirebaseAuth.instance.signOut();
+//       // Navigate to login or any other screen after sign out
+//     } catch (e) {
+//       print('Error signing out: $e');
+//     }
+//   }
 
 
 class setting_main extends StatefulWidget {
