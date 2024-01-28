@@ -111,8 +111,10 @@ class _registernewState extends State<registernew> {
                     
                     
                     TextFormField(
+                      style: TextStyle(color: Colors.white),
                       controller: emailcontroller,
                       decoration: InputDecoration(
+                        labelStyle: TextStyle(color: Colors.white,fontSize: 18),hintStyle: TextStyle(color: Colors.white),
                         isDense: true,
                         labelText: "Email",
                         hintText: "abc@gmail.com",
@@ -120,14 +122,16 @@ class _registernewState extends State<registernew> {
                     ),
                     SizedBox(height: 20),
                    TextFormField(
+                    style: TextStyle(color: Colors.white),
                       controller: passwordcontroller,
                       decoration: InputDecoration(
+                        labelStyle: TextStyle(color: Colors.white,fontSize: 18),hintStyle: TextStyle(color: Colors.white),
                         isDense: true,
                         labelText: "Password",
                         hintText: "******",
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 80),
                     
                     
                     Container(
@@ -140,9 +144,14 @@ class _registernewState extends State<registernew> {
                       child: Center(
                           child: TextButton(
                             onPressed: (){
+                              if(emailcontroller.text.isNotEmpty || passwordcontroller.text.isNotEmpty){
                              Signup();
-                             Get.to(home());
-                            } , child: Text(
+                             Get.to(home());}
+                             else{
+                              utils().toastmessege("Enter Valid credentials");
+                             }
+                            } , 
+                            child: Text(
                               "Next -> ",
                               style: TextStyle(
                                     fontSize: 18, // Adjust the font size as needed
@@ -153,12 +162,12 @@ class _registernewState extends State<registernew> {
                       )
                     ),
                     SizedBox(height: 60,),
-                    Container(
-                      width: 500,
-                      height: 10,
-                      color: Colors.white,
+                    // Container(
+                    //   width: 500,
+                    //   height: 10,
+                    //   color: Colors.white,
                       
-                    )
+                    // )
                   ],
                 ),
               

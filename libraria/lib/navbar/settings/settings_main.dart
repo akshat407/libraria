@@ -89,13 +89,13 @@ class _setting_mainState extends State<setting_main> {
                   },
                   child: Container(
                     padding: EdgeInsets.only(top: 20),
-                    child: Image.asset("assets/images/user.png",height:70 ,),
+                    child: Image.asset("assets/images/logout-8-512.png",height:70 ,),
                   
                   
                   ),
                 ),
                 SizedBox(height: 20,),
-                Text("Profile",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                Text("Log Out",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                 
               ],
             ),
@@ -144,7 +144,7 @@ class _setting_mainState extends State<setting_main> {
               children: [
                 InkWell(
                   onTap: () {
-                    Get.to(chngepswd());
+                    Get.to(()=>chngepswd());
                   },
                   child: Container(
                     padding: EdgeInsets.only(top: 20),

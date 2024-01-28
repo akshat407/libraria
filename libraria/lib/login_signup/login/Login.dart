@@ -86,7 +86,7 @@ class _LoginState extends State<Login> {
                 height: MediaQuery.of(context).size.height * 0.65,
                 //TO EDIT PADDDING SIDE WISE HERE 
                 // padding: EdgeInsets.fromLTRB(16,20,16,16),
-                padding: EdgeInsets.only(left: 20,right: 20),
+                padding: EdgeInsets.only(left: 20,top:100,right: 20),
               
                 // margin: EdgeInsets.only(top: 15),
                 color: Color(0xFF10596D),
@@ -94,24 +94,26 @@ class _LoginState extends State<Login> {
                   children: [
                     // RoundedTextField(placeholder: 'Email'),
                     TextFormField(
+                      style: TextStyle(color: Colors.white,fontSize: 18),
                       controller: emailcontroller,
                       decoration: InputDecoration(
+                        labelStyle: TextStyle(color: Colors.white),hintStyle: TextStyle(color: Colors.white),
                         isDense: true,
                         labelText: "Email",
                         hintText: "abc@gmail.com",
                       ),
                     ),
-                    SizedBox(height: 40),
+                    SizedBox(height: 20),
                     TextFormField(
                       controller: passwordcontroller,
-                      
+                      style: TextStyle(color: Colors.white,fontSize: 18),
                       decoration: InputDecoration(
                         focusColor: Colors.white,
                         fillColor: Colors.white,
-                        
+                        labelStyle: TextStyle(color: Colors.white),hintStyle: TextStyle(color: Colors.white),
                         isDense: true,
                         labelText: "Password",
-                        hintText: "abc@gmail.com",
+                        hintText: "******",
                       ),
                     ),
                     SizedBox(height: 80),
