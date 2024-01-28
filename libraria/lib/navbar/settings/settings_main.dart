@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:libraria/login_signup/login/welcome.dart';
 import 'package:libraria/navbar/settings/change_pswd.dart';
+import 'package:libraria/navbar/settings/version.dart';
 import 'package:libraria/utils/color.dart';
 import 'package:libraria/utils/utils.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -172,11 +173,14 @@ class _setting_mainState extends State<setting_main> {
                   onTap: () {
                     
                   },
-                  child: Container(
-                    padding: EdgeInsets.only(top: 20),
-                    child: Image.asset("assets/images/systemupdate.png",height:70 ,),
-                  
-                  
+                  child: InkWell(
+                    onTap: (){Get.to(()=>version());},
+                    child: Container(
+                      padding: EdgeInsets.only(top: 20),
+                      child: Image.asset("assets/images/systemupdate.png",height:70 ,),
+                    
+                    
+                    ),
                   ),
                 ),
                 SizedBox(height: 20,),

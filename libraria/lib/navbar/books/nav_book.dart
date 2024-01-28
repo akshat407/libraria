@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:libraria/navbar/books/notes.dart';
 import 'package:libraria/utils/color.dart';
 import 'package:libraria/utils/viewpdf.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -56,15 +57,17 @@ class nav_book extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.all(30),
-                      height: 250,width:100,
-                      color: AIColors.primaryColor2,
+                      height: 200,width:110,
+                      color: Colors.grey[350],
+                      child: Image.asset("assets/images/pdf.png",fit: BoxFit.fill),
                     ),
                   ),
                   
                   Expanded(
                     child: Container(margin: EdgeInsets.all(30),
-                      height: 250,width:100,
-                      color: AIColors.primaryColor2,
+                      height: 200,width:110,
+                      color: Colors.grey[350],
+                      child: Image.asset("assets/images/pdf.png",fit: BoxFit.fill,),
                     ),
                   ),
                   ]
@@ -382,7 +385,7 @@ class nav_book extends StatelessWidget {
                     ),
                     SizedBox(height: 20,),
                     
-                    ElevatedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(AIColors.primaryColor2)),
+                    ElevatedButton(onPressed: (){Get.to(()=>notes());},style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(AIColors.primaryColor2)),
                      child: Text("Subject Notes Centre >",style: GoogleFonts.poppins(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),)),
                      SizedBox(height: 30,)    
                     
