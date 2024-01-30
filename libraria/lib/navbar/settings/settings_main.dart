@@ -154,7 +154,7 @@ class _setting_mainState extends State<setting_main> {
                   ),
                 ),
                 SizedBox(height: 20,),
-                Text("Change Password",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                Text("Change Password",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),)
                 
               ],
             ),

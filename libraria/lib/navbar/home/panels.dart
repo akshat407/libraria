@@ -8,7 +8,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 
 class panels extends StatefulWidget {
-  final int intcnt;final List list;
+  final int intcnt;final Map list;
   const panels({super.key, required this.intcnt, required this.list});
 
   @override
@@ -42,7 +42,7 @@ class _panelsState extends State<panels> {
           mainAxisExtent:150,crossAxisSpacing: 10,mainAxisSpacing: 15,crossAxisCount: 3),
         itemBuilder: (context, index) {
           return InkWell(
-            onTap: (){Get.to(viewpdf(pdfUrl: widget.list[index], name: "Available Books"));},
+            onTap: (){Get.to(viewpdf(pdfUrl: widget.list.keys.toList()[index], name: widget.list.values.toList()[index]));},
             highlightColor: Colors.black,
             child: Container(
               child: Image.asset("assets/images/pdf.png",fit: BoxFit.fill,),

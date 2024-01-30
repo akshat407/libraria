@@ -14,27 +14,27 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
-  List bio = ["https://drive.google.com/uc?export=view&id=1jp0iJ1MSjt8EpjTlLkX0AvjuFy1WNb-L",
-  "https://drive.google.com/uc?export=view&id=164N4ItcAsG2I4-zJE3ol1SPofDXiw6Lk",
-  "https://drive.google.com/uc?export=view&id=11EeIK0QDOZZW2gBfAeRtS-hVn2doYxB9",
-  "https://drive.google.com/uc?export=view&id=1uUsR6tHNDGiP8MbA1SmJxrpBJa4C0CFl",
-  "https://drive.google.com/uc?export=view&id=1oeviZJlEuTNbdiSG2pqeKR9ZupMFwbs0"];
+  Map<String,String> bio = {"https://drive.google.com/uc?export=view&id=1jp0iJ1MSjt8EpjTlLkX0AvjuFy1WNb-L":"The Book of Margery Kempe",
+  "https://drive.google.com/uc?export=view&id=164N4ItcAsG2I4-zJE3ol1SPofDXiw6Lk":"Kalinski Art",
+  "https://drive.google.com/uc?export=view&id=11EeIK0QDOZZW2gBfAeRtS-hVn2doYxB9":"Saint Gemma Galgani",
+  "https://drive.google.com/uc?export=view&id=1uUsR6tHNDGiP8MbA1SmJxrpBJa4C0CFl":"Story Catches  You",
+  "https://drive.google.com/uc?export=view&id=1oeviZJlEuTNbdiSG2pqeKR9ZupMFwbs0":"Worsted to Westminister"};
 
-  List mag = ["https://drive.google.com/uc?export=view&id=1wp0mkOc-VuikLLAQ8w6UsQn1jM5yijla",
-  "https://drive.google.com/uc?export=view&id=18fifET9v2-UsvpCtKyfcRd_PeoIIATYE",
-  "https://drive.google.com/uc?export=view&id=1DAfi28V3xuwoQoHIziDn35XUEvbGhAK3",
-  "https://drive.google.com/uc?export=view&id=1OEdTOCgPxB9Pwh3lAv1daG2BhXj9rpB9",
-  "https://drive.google.com/uc?export=view&id=11WgDU9IYC1EGCnzimjxKk1XV6Kb3chrv"];
+  Map<String,String> mag = {"https://drive.google.com/uc?export=view&id=1wp0mkOc-VuikLLAQ8w6UsQn1jM5yijla":"BBC Science Focus",
+  "https://drive.google.com/uc?export=view&id=18fifET9v2-UsvpCtKyfcRd_PeoIIATYE":"National Scientist",
+  "https://drive.google.com/uc?export=view&id=1DAfi28V3xuwoQoHIziDn35XUEvbGhAK3":"Scientific american",
+  "https://drive.google.com/uc?export=view&id=1OEdTOCgPxB9Pwh3lAv1daG2BhXj9rpB9":"The Group Travel",
+  "https://drive.google.com/uc?export=view&id=11WgDU9IYC1EGCnzimjxKk1XV6Kb3chrv":"The Group Travel"};
 
-  List eng = ["https://drive.google.com/uc?export=view&id=1d95HxOtiUvfFQDcwSAVlzPIkU5R4vfHL",
-  "https://drive.google.com/uc?export=view&id=1HPprD7g_IeZy4_u7GEASrZa-7csY_SY2",
-  "https://drive.google.com/uc?export=view&id=1w6PgMM27u3FahxUgJL2k1p1GdHansIkl",
-  "https://drive.google.com/uc?export=view&id=1RyLVswYNScjVm72rR9xCVQhrQRZdMunf",
-  "https://drive.google.com/uc?export=view&id=1rXg2kAdHe_MMSmesAiGXvRf2YVSNVJ2r",
-  "https://drive.google.com/uc?export=view&id=1DLRUcS4t4hdqOhIvBR-_Sj6SuESEfpr8",
-  "https://drive.google.com/uc?export=view&id=1YeiFGjhGfTRhDt9MKCdDgFj9IfLNv7ls",
-  "https://drive.google.com/uc?export=view&id=1hrnhdiB_somLE0Zfkk05jqkBuIWMxrR6",
-  "https://drive.google.com/uc?export=view&id=1oLbMh7jkCCkqWJ6qyaZKM_LGU6X04vgo"];
+  Map<String,String> eng = {"https://drive.google.com/uc?export=view&id=1d95HxOtiUvfFQDcwSAVlzPIkU5R4vfHL":"Electronics and Communication",
+  "https://drive.google.com/uc?export=view&id=1HPprD7g_IeZy4_u7GEASrZa-7csY_SY2":"Fluid Mechanics",
+  "https://drive.google.com/uc?export=view&id=1w6PgMM27u3FahxUgJL2k1p1GdHansIkl":"Microprocessor and Microcontroller",
+  "https://drive.google.com/uc?export=view&id=1RyLVswYNScjVm72rR9xCVQhrQRZdMunf":"Operating System",
+  "https://drive.google.com/uc?export=view&id=1rXg2kAdHe_MMSmesAiGXvRf2YVSNVJ2r":"Testing and Evaluation",
+  "https://drive.google.com/uc?export=view&id=1DLRUcS4t4hdqOhIvBR-_Sj6SuESEfpr8":"UG Basic Electrical",
+  "https://drive.google.com/uc?export=view&id=1YeiFGjhGfTRhDt9MKCdDgFj9IfLNv7ls":"Engineering Graphics",
+  "https://drive.google.com/uc?export=view&id=1hrnhdiB_somLE0Zfkk05jqkBuIWMxrR6":"English",
+  "https://drive.google.com/uc?export=view&id=1oLbMh7jkCCkqWJ6qyaZKM_LGU6X04vgo":"Calculus and Linear Algebra"};
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +89,7 @@ class _homescreenState extends State<homescreen> {
               ),
               Image.asset("assets/images/librariaText.png"),SizedBox(height: 30,),
               Container(
-                width: MediaQuery.of(context).size.width/1.45,
+                width: MediaQuery.of(context).size.width/1.40,
                 decoration: BoxDecoration(color: AIColors.primaryColor2,
                 borderRadius: BorderRadius.all(Radius.circular(10))),
                 padding: EdgeInsets.all(5),alignment: Alignment.center ,
