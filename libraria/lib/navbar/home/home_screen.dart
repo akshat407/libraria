@@ -28,7 +28,7 @@ class _homescreenState extends State<homescreen> {
 
   Map<String,String> eng = {"https://drive.google.com/uc?export=view&id=1d95HxOtiUvfFQDcwSAVlzPIkU5R4vfHL":"Electronics and Communication",
   "https://drive.google.com/uc?export=view&id=1HPprD7g_IeZy4_u7GEASrZa-7csY_SY2":"Fluid Mechanics",
-  "https://drive.google.com/uc?export=view&id=1w6PgMM27u3FahxUgJL2k1p1GdHansIkl":"Microprocessor and Microcontroller",
+  "https://drive.google.com/uc?export=view&id=1w6PgMM27u3FahxUgJL2k1p1GdHansIkl":"Microprocessor",
   "https://drive.google.com/uc?export=view&id=1RyLVswYNScjVm72rR9xCVQhrQRZdMunf":"Operating System",
   "https://drive.google.com/uc?export=view&id=1rXg2kAdHe_MMSmesAiGXvRf2YVSNVJ2r":"Testing and Evaluation",
   "https://drive.google.com/uc?export=view&id=1DLRUcS4t4hdqOhIvBR-_Sj6SuESEfpr8":"UG Basic Electrical",

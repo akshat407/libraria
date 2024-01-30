@@ -22,7 +22,7 @@ class _viewpdfState extends State<viewpdf> {
     
     return Scaffold(
       appBar: AppBar(foregroundColor: Colors.white,
-        title: Text(widget.name,style: GoogleFonts.poppins(fontSize: 24,fontWeight: FontWeight.w500,color: Colors.white),),
+        title: Text(widget.name,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500,color: Colors.white),),
         backgroundColor: AIColors.primaryColor2,
         centerTitle: true,
         

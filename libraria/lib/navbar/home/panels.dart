@@ -39,14 +39,20 @@ class _panelsState extends State<panels> {
         itemCount: widget.intcnt,
         scrollDirection: Axis.vertical,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          mainAxisExtent:150,crossAxisSpacing: 10,mainAxisSpacing: 15,crossAxisCount: 3),
+          mainAxisExtent:185,crossAxisSpacing: 15,mainAxisSpacing: 30,crossAxisCount: 3),
         itemBuilder: (context, index) {
           return InkWell(
             onTap: (){Get.to(viewpdf(pdfUrl: widget.list.keys.toList()[index], name: widget.list.values.toList()[index]));},
             highlightColor: Colors.black,
-            child: Container(
-              child: Image.asset("assets/images/pdf.png",fit: BoxFit.fill,),
-              decoration: BoxDecoration(color: Colors.grey[350]),
+            child: Column(
+              children: [
+                Container(
+                  child: Image.asset("assets/images/pdf.png",fit: BoxFit.fill,),
+                  decoration: BoxDecoration(color: Colors.grey[350]),
+                ),
+                SizedBox(height: 5,),
+                Text(widget.list.values.toList()[index],textAlign:TextAlign.center,style: GoogleFonts.poppins(fontSize: 14,color: Colors.black),),
+              ],
             ),
           );
         },   
