@@ -19,7 +19,13 @@ age account credentials
 
 ## Screenshots
 
-![ChatGPT APP](https://user-images.githubusercontent.com/89196733/218802241-b56b8741-da3e-484c-866e-350b021c70e7.jpg)
+![App Screenshot](https://github.com/akshat407/libraria/blob/main/libraria/assets/images/screenshot1.jpg)
+![App Screenshot](https://github.com/akshat407/libraria/blob/main/libraria/assets/images/screenshot2.jpg)
+![App Screenshot](https://github.com/akshat407/libraria/blob/main/libraria/assets/images/screenshot3.jpg)
+![App Screenshot](https://github.com/akshat407/libraria/blob/main/libraria/assets/images/screenshot4.jpg)
+![App Screenshot](https://github.com/akshat407/libraria/blob/main/libraria/assets/images/screenshot5.jpg)
+![App Screenshot](https://github.com/akshat407/libraria/blob/main/libraria/assets/images/screenshot6.jpg)
+![App Screenshot](https://github.com/akshat407/libraria/blob/main/libraria/assets/images/screenshot7.jpg)
 
 
 
@@ -43,17 +49,3 @@ flutter pub get
 flutter run
 
 ```
-    
-## Configuration :
-
-To use this app, you need to generate an API key from OpenAI. Once you have the API key, you can enter it in the app and start chatting. After you saved your API key, you won't need to enter it again in the future.
-## Acknowledgements
-
- - This app was made possible with the help of Flutter and OpenAI API. We are grateful for their support and resources.
-
-
-
-## Join with app!
-- ChatGPT app is a one-of-a-kind chat experience that is guaranteed to keep you engaged. 
-
-- If you love what you see, don't forget to give this project a star. Your support means the world to us!
